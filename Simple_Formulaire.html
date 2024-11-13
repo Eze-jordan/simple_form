@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="eze-jordan">
+    <meta name="description" content="">
+    <meta name="keywords" content="Formulaire">
+    <link rel="shortcut icon" type="image/png" href="https://eze-david.highticketdeveloper.com/icon.png">
+    <title>Formulaire de Connexion</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+
+        #page-header{
+            
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        #page-header .column {
+            height: 1000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .accent-blue {
+            background-color: #345E95;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .accent-blue .Nom_App {
+            font-size: 40px;
+            font-weight: 800;
+            padding-top: 40px;
+            
+        }
+
+        .accent-white {
+            background-color: #ffffff;
+        }
+
+        .formulaire {
+            padding-top: 90px;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #333;    
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-control label {
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-control input {
+            height: 45px;
+            padding: 10px;
+            font-size: 16px;
+            border: 3px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-control input:focus {
+            border-color: #002bff;
+            outline: none;
+            
+        }
+             
+        .fullwidth-button {
+            height: 45px;
+            width: 50%;
+            background-color: #345E95;
+            color: #ffffff;
+            font-size: 18px;
+            border-radius: 100px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .fullwidth-button:hover {
+            background-color: #092e5fc0;
+        }
+
+        #page-footer {
+            height: 20px;
+            width: 100%;
+            background-color: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        #page-footer span {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="fullwidth" id="page-header">
+       
+        <div class="column accent-blue">
+            <div class="Nom_App">Formulaire de Connexion</div>
+            <img src="https://eze-david.highticketdeveloper.com/image_form.png" alt="">
+        </div> <!--Colonne_de_gauche-->
+
+       
+        <div class="column accent-white">
+            <h3 class="formulaire">Se connecter</h3>
+            <form action="/submit" method="POST">
+                <div class="form-control">
+                    <label for="Nom">Nom</label>
+                    <input type="text" id="Nom" name="Nom" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="Prénom">Prénom</label>
+                    <input type="text" id="lastName" name="Prénom" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="phone">Numéro de téléphone</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+                </div>
+
+                <div class="form-control">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="confirmPassword">Confirmer le mot de passe</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+
+               <div class="submit">
+                 <button type="submit" class="fullwidth-button">Se connecter</button></div>
+            </form>
+        </div>
+    </div> <!--Formulaire_de_connexion -->
+
+   
+    <div id="page-footer">
+        <span>©Copyright 2024 | Tous droits réservés à ESIITECH</span>
+    </div> <!-- Pied_de_page -->
+
+</body>
+
+</html>
